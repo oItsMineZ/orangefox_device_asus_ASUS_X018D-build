@@ -10,33 +10,27 @@ on:
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
-        default: '11.0'
+        default: '9.0'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/OrangeFoxRecovery/device_xiaomi_garden'
+        default: 'https://github.com/Dynamo8917/twrp_device_nokia_msm8917'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'fox_11.0_Q'
+        default: 'main'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/xiaomi/garden'
-      COMMON_TREE_URL:
-        description: 'COMMON_TREE_URL (if no common tree, leave blank)'
-        required: false
-      COMMON_PATH:
-        description: 'COMMON_PATH (if no common tree, leave blank)'
-        required: false
+        default: 'device/asus/ASUS_X018D'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'garden'
+        default: 'E2M'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_garden'
+        default: 'omni_E2M'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
@@ -44,7 +38,6 @@ on:
 
 jobs:
   build:
-    if: github.event.repository.owner.id == github.event.sender.id
     runs-on: ubuntu-24.04
     permissions:
       contents: write
