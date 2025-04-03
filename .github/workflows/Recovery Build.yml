@@ -14,11 +14,11 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Dynamo8917/twrp_device_nokia_msm8917'
+        default: 'https://github.com/Dynamo8917/android_recovery_fih_E2M'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'main'
+        default: 'twrp'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -38,7 +38,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     permissions:
       contents: write
     steps:
